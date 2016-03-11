@@ -12,7 +12,7 @@ function getRandomNumber(request, reply) {
     return reply(randomNumber);
 }
 
-randomServer.connection({port: 8082});
+randomServer.connection({port: 8080});
 
 
 randomServer.route({
