@@ -1,0 +1,15 @@
+{
+  "name": "purchase_history_node",
+  "description": "Interact with Random creation application",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -L app.js"
+  },
+  "dependencies": {
+    "hapi": "^13.0.0",
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {}
+}

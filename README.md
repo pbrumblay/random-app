@@ -1,2 +1,6 @@
-# random-app
-simple application for testing dependencies in openshift
+# Random UUID generator in NodeJS using Hapi 
+
+Demo NodeJS application for random number generation.
+
+
+
