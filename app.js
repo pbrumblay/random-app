@@ -1,27 +1,9 @@
 'use strict';
-
-var Hapi = require('hapi');
-var randomServer = new Hapi.Server();
+var http = require('http');
 var uuid = require('node-uuid');
 
-function getRandomNumber(request, reply) {
-    var id = request.query.customerId;
-    console.log(request.server.info.port);
-    var randomNumber = uuid.v4();
-    console.log('Random Number: ' + randomNumber);
-    return reply(randomNumber);
-}
-
-randomServer.connection({port: 8080});
-
-
-randomServer.route({
-    method: "GET",
-    path: '/random',
-    handler: getRandomNumber
+var srv = http.createServer( (req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end(uuid.v4());
 });
-
-
-randomServer.start(function(){
-    console.log('Server running at:', randomServer.info.uri);
-});
+srv.listen(8080);
